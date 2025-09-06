@@ -19,6 +19,7 @@ function HomePage(){
             <Education />
             <OpenAccount />
             <Footer />
+            <hr />
         </>
     );
 }

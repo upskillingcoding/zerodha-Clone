@@ -9,6 +9,9 @@ import PricingPage from './landing_page/pricing/PricingPage';
 import Products from './landing_page/products'; 
 import SupportPage from './landing_page/support/SupportPage';
 import Signup from './landing_page/signup/Signup';
+import Footer from './Footer';
+import Navbar from './Navbar';
+import NotFound from './landing_page/NotFound';
 
 
 
@@ -25,14 +28,17 @@ root.render(
 
 
   <BrowserRouter>
+       <Navbar />
     <Routes>
-        <Route path='/' element={<HomePage />}></Route>
-        <Route path='/signup' element={<Signup />}></Route>
-        <Route path='/about' element={<AboutPage />}></Route>
-        <Route path='/pricing' element={<PricingPage />}></Route>
-        <Route path='/products' element={<Products />}></Route>
-        <Route path='/support' element={<SupportPage />}></Route>
+        <Route path='/' element={<HomePage />} />
+        <Route path='/signup' element={<Signup />} />
+        <Route path='/about' element={<AboutPage />} />
+        <Route path='/pricing' element={<PricingPage />} />
+        <Route path='/products' element={<Products />} />
+        <Route path='/support' element={<SupportPage />} />
+        <Route path='*' element={<NotFound />} />
     </Routes>
+    <Footer />
   </BrowserRouter>
 
 );
